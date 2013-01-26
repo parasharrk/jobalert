@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @job_stream.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @job_stream.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_stream_path(@job_stream) %> |
+<%= link_to 'Back', job_streams_path %>

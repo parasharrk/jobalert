@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  job_title: MyString
+  post_name: MyString
+  last_date: 2013-01-27
+  edition_date: 2013-01-27
+  referance_link: MyString
+  detail: MyString
+
+two:
+  job_title: MyString
+  post_name: MyString
+  last_date: 2013-01-27
+  edition_date: 2013-01-27
+  referance_link: MyString
+  detail: MyString

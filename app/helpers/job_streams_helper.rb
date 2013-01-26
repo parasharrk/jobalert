@@ -1,0 +1,2 @@
+module JobStreamsHelper
+end

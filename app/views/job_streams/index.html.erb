@@ -1,0 +1,25 @@
+<h1>Listing job_streams</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @job_streams.each do |job_stream| %>
+  <tr>
+    <td><%= job_stream.name %></td>
+    <td><%= job_stream.title %></td>
+    <td><%= link_to 'Show', job_stream %></td>
+    <td><%= link_to 'Edit', edit_job_stream_path(job_stream) %></td>
+    <td><%= link_to 'Destroy', job_stream, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Job stream', new_job_stream_path %>
