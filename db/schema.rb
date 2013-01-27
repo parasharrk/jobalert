@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126210211) do
+ActiveRecord::Schema.define(:version => 20130127172805) do
 
   create_table "job_streams", :force => true do |t|
     t.string   "name"

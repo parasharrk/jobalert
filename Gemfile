@@ -34,7 +34,9 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# gem "twitter-bootstrap-rails"
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
 group :development do
   gem 'mysql', '2.8.1'
@@ -42,5 +44,5 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  #gem 'pg'
 end

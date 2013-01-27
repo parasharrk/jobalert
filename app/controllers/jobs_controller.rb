@@ -25,7 +25,7 @@ class JobsController < ApplicationController
   # GET /jobs/new.json
   def new
     @job = Job.new
-
+    @state_names = State.where(:active=>true)
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @job }

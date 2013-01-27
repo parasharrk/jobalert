@@ -1,4 +1,4 @@
-<%= form_for(@job) do |f| %>
+<%= form_tag '/posts' do %>
   <% if @job.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
@@ -12,30 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :job_title %><br />
-    <%= f.text_field :job_title %>
+    <%= label_tag 'job_title' %><br />
+    <%= text_field_tag  'job_title' %>
   </div>
   <div class="field">
-    <%= f.label :post_name %><br />
-    <%= f.text_field :post_name %>
+    <%= label_tag 'post_name' %><br />
+    <%= text_field_tag  'post_name' %>
   </div>
   <div class="field">
-    <%= f.label :last_date %><br />
-    <%= f.date_select :last_date %>
+    <%= label_tag 'state_id', 'State' %><br />
+    <%= select_tag "state_id", options_from_collection_for_select(@state_names, "id", "name"), :style=>"width:230px;" %>
   </div>
   <div class="field">
-    <%= f.label :edition_date %><br />
-    <%= f.date_select :edition_date %>
+    <%= label_tag 'last_date' %><br />
+    <%= date_select("last_date" , "last_date", :start_year => 2020, :end_year => 2013, :order => [:month, :day, :year], :use_short_month => true)  %>
   </div>
   <div class="field">
-    <%= f.label :referance_link %><br />
-    <%= f.text_field :referance_link %>
+    <%= label_tag 'edition_date' %><br />
+    <%= date_select("edition_date" , "edition_date", :start_year => 2020, :end_year => 2013, :order => [:month, :day, :year], :use_short_month => true)  %>
   </div>
   <div class="field">
-    <%= f.label :detail %><br />
-    <%= f.text_field :detail %>
+    <%= label_tag 'referance_link' %><br />
+    <%= text_field_tag  'referance_link' %>
+  </div>
+  <div class="field">
+    <%= label_tag 'detail' %><br />
+    <%= text_field_tag  'detail' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag %>
   </div>
 <% end %>
